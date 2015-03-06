@@ -218,6 +218,10 @@ Have Fun.
 
 ## Support & dontations
 
+I'm always there to help out with problems or question. It might just take a while for me to respond. Feel free to ask.
+
+If you find a bug or feature you wish, just open an issue on https://github.com/somatonic/Pollino/issues
+
 Making such modules takes lots of time. Feel free to support me and buy me a beer or make a donation.
 My Paypal address is [philipp at urlich dot ch]
 
