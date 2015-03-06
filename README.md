@@ -41,7 +41,7 @@ You can create a new poll by adding a child to the newly created /pollinopolls/ 
 
 Then add as many child pages to the poll that represent the answers. Make sure those are all published. (You can alternatively use PageTable field to make them addable and editable directly from the puestion page).
 
-Create a new template file "pollino_poll" and add this example code to render the poll.
+Create a new template file ```pollino_poll.php``` in your site/templates folder and add this example code to render the poll.
 
 ```
 $content .= "<div class='pollino_poll'>";
@@ -56,7 +56,7 @@ The ```renderPoll(Pollpage)``` method will just return the form with the options
 
 As you can see you have to add the wrapper container ```.pollino_poll``` to hold the poll and its title of the poll. This makes it easier to customize the output. I also used a ```.inner``` div as you can see, but that's purely personal preference to keep things more flexible.
 
-Make the css ``pollino.css``` that comes with the module your own and modify to your needs to create you own theme.
+Make the css ```pollino.css``` that comes with the module your own and modify to your needs to create you own theme.
 
 ### Configurations and Options
 
