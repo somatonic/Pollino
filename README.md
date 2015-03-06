@@ -2,24 +2,24 @@
 
 ### A simple poll module for ProcessWire
 
-This module makes it simple to setup polls for your website. It is based on simple page setup to create polls. Each poll is a page, and its children are the answers. Pollino will create the templates and a PollinoPolls page in the root to start with. You can add fields to the templates as you wish and later use hooks to modify the output of the poll. This can be useful to for example to use images as options or just some custom markup etc.
+This module makes it simple to setup polls for your website. It is based on a simple page setup to create the polls. So each poll is a page, and its children are the answers. Pollino will create the templates and a PollinoPolls page in the root to start with. You can add fields to the templates as you wish and later use hooks to modify the output of the poll. This can be useful, for example, to use images as options or just some custom markup etc.
 
-It provides some API to render the poll form and the result. These methods are hookable and it's easy to customize the output if needed.
+It provides some API to render the poll form and the result. These methods are hookable and it's easy to customize the output if needed. It can be rendered on any page and even multiple on the same page.
 
-Pollino takes care of saving and preventing multiple votes. It comes with some configuration settings to choose what method to use to prevent from multiple votings:
+Pollino takes care of saving the votes and preventing multiple votes. It comes with some configuration settings to choose what method to use to prevent from multiple votings:
 
 - using cookie and an expire time
 - or by IP and optionally also the UserAgent with and expire time
 - or by logged in User
 
-Pollino isn't 100% plug'n'play but comes with some premade theme and output for you to start.
+Pollino isn't 100% plug'n'play but it provides a solid foundation and comes with some premade theme and output for you to start. It takes care of the boring stuff and lets you concentrate on the front-end stuff and styling. That's what matters after all.
 
 It does support multilanguage, as all strings are translatable in the module. Also since it's using simple pages and templates you're free to add or change fields to make its output multilanguage without much hassle.
 
 ### Requirements
 
 - ProcessWire 2.5.5
-- jQuery for when using ajax enhancement
+- jQuery Core for when using ajax enhancement
 
 ### Installation
 
@@ -29,7 +29,7 @@ When installing the module it will create some templates for you to setup polls.
 - pollino_poll
 - pollino_answer
 
-Pollino will also create the a page "PollinoPolls" in the root of you site using the "pollino_polls" template.
+Pollino will also create the a page "PollinoPolls" in the root of your site using the "pollino_polls" template.
 
 Add the css that comes with the module ```pollino.css``` to your site.
 
@@ -56,15 +56,13 @@ $content .= "</div>";
 
 The ```renderPoll(Pollpage)``` method will just return the form with the options, or if the user already voted, the result list.
 
-As you can see you have to add the wrapper container ```.pollino_poll``` to hold the poll and its title of the poll. This makes it easier to customize the output. I also used a ```.inner``` div as you can see, but that's purely personal preference to keep things more flexible.
+As you can see you have to add the wrapper container ```.pollino_poll``` to hold the poll and its title of the poll. This makes it easier to customize the output. I also used a ```.inner``` div as you can see, but that's purely personal preference to keep things more flexible. All it needs is at least wrapper around the poll, expecially for the ajax script to know where to insert the result.
 
 Make the css ```pollino.css``` that comes with the module your own and modify to your needs to create you own theme.
 
 ### Configurations and Options
 
-In the module screen you have various options to configure the module.
-
-These options can also be set directly via API using setOptions() method.
+On the module's screen you have various options to configure the module. These options can also be set directly via API using setOptions(array|string) method.
 
 ```
 $pollino = $modules->Pollino;
@@ -87,9 +85,9 @@ $options = array(
 );
 ```
 
-You can also add one or more configurations (named) in your site/config.php and use them.
+You can also add one or more configurations (named array) in your site/config.php and use them.
 
-Example add this to your config
+Example to create a config names ```myconfig1```, add this to your config
 
 ```
 $config->pollino = array(
@@ -102,25 +100,25 @@ $config->pollino = array(
     );
 ```
 
-Then use the configuration name "myconfig1" in your calls.
+Then use the configuration name "myconfig1" in your calls. Either with setOptions()
 
 ```
 $pollino->setOptions("myconfig1");
 ```
 
-Or when using the render method renderPoll()
+Or when using the render method renderPoll() you can do this
 
 ```
 $pollino->renderPoll($page, "myconfig1");
 ```
 
-To render a poll view only you can force that by setting the second or third argument to true:
+To render a poll view-only, you can force it by setting the second or third  (if options present) argument to true:
 
 ```
 echo $pollino->renderPoll($page, $viewOnly = true);
 ```
 
-or with options added
+or with additional options argument added
 
 ```
 echo $pollino->renderPoll($page, $options, $viewOnly = true);
@@ -206,7 +204,7 @@ To make this work you must also modify the "result_outertpl" to be a table. Like
 
 ```
 $options = array(
-    'result_outertpl' => '<ol class="pollino_list_results">{out}</ol>'
+    'result_outertpl' => '<table class="pollino_list_results">{out}</table>'
 )
 echo $modules->Pollino->renderPoll($page, $options);
 
