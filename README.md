@@ -120,7 +120,7 @@ To render a poll view only you can force that by setting the second or third arg
 echo $pollino->renderPoll($page, $viewOnly = true);
 ```
 
-or
+or with options added
 
 ```
 echo $pollino->renderPoll($page, $options, $viewOnly = true);
