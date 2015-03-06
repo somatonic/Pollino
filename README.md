@@ -216,6 +216,14 @@ From there, anything is possible to create your own output and maybe even integr
 
 Have Fun.
 
+## Support & dontations
+
+Making such modules takes lots of time. Feel free to support me and buy me a beer or make a donation.
+My Paypal address is [philipp at urlich dot ch]
+
+Or via flattr.com, you can simply like my repository to make a donation.
+
+
 ## Copyright & License
 
 Pollino Polls for ProcessWire to help setup simple polls
