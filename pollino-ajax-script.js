@@ -35,11 +35,5 @@ $(function(){
     });
 
 
-    $('[id^="pollino_chart_"').each(function(i){
-        var ctx[i] = document.getElementById($(this).id).getContext("2d");
-        var pollinochart[i] = new Chart(ctx[i]).Bar();
-        pollinochart[i].addData([40, 60], "August");
-    });
-
 
 });
