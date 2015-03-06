@@ -44,6 +44,8 @@ Then add as many child pages to the poll that represent the answers. Make sure t
 Create a new template file ```pollino_poll.php``` in your site/templates folder and add this example code to render the poll.
 
 ```
+// may needs modification as this examples uses delayed output
+// but you get the idea
 $content .= "<div class='pollino_poll'>";
 $content .= "<div class='inner'>";
 $content .= "<h3>$page->title</h3>";
