@@ -216,7 +216,7 @@ From there, anything is possible to create your own output and maybe even integr
 
 Have Fun.
 
-## Support & dontations
+## Support & donations
 
 I'm always there to help out with problems or question. It might just take a while for me to respond. Feel free to ask.
 
