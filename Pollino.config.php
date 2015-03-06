@@ -44,7 +44,7 @@ class PollinoConfig extends ModuleConfig{
                 'children' => array(
                     array(
                         'name' => 'prevent_voting_type',
-                        'value' => 1,
+                        'value' => 'use_cookie',
                         'label' => 'Prevent Multiple Votings Method',
                         'description' => 'Choose one or the other method',
                         'type' => 'radios',
