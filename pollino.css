@@ -1,0 +1,172 @@
+
+/**
+ * Pollino CSS
+ * ==================================================================
+ */
+
+.pollino_poll {
+    background-color: #f5f5f5;
+    max-width: 300px;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: 0 0 1em 0;
+}
+
+.pollino_poll h3 {
+    padding: 0;
+    margin: 0 0 0.7em 0;
+}
+
+.pollino_poll .pollino_list,
+.pollino_poll .pollino_list_results {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+.pollino_poll .pollino_list .pollino_item,
+.pollino_poll .pollino_list_results .pollino_item {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+}
+.pollino_poll .pollino_list .pollino_item label{
+    cursor: pointer;
+}
+.pollino_poll .pollino_list .pollino_item label input{
+    vertical-align: middle;
+}
+.pollino_poll .pollino_percent_wrapper{
+    display: block;
+    width: 100%;
+    background-color: #eee;
+    overflow: hidden;
+}
+.pollino_poll .pollino_percent_bar{
+    display: block;
+    background-color: #666;
+    height: 10px;
+}
+
+.pollino_poll .pollino_total{
+    font-size: 0.8em;
+    color: #aaa;
+    margin: 0;
+}
+
+.pollino_poll .pollino_submit{
+    background-color: #aaa;
+    border: 1px solid #999;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+.pollino_poll .pollino_submit:focus,
+.pollino_poll .pollino_submit:hover{
+    background-color: #888;
+}
+.pollino_poll .pollino_submit:active{
+    background-color: #444;
+}
+
+.pollino_poll .pollino_error{
+    background-color: #aa0000;
+    color: white;
+    padding: 0 0.5em;
+}
+
+/**
+ * examples colors
+ */
+.pollino_poll .pollino_item0 .pollino_percent_bar{ background-color: darkcyan; }
+.pollino_poll .pollino_item1 .pollino_percent_bar{ background-color: indianred; }
+.pollino_poll .pollino_item2 .pollino_percent_bar{ background-color: tomato; }
+.pollino_poll .pollino_item3 .pollino_percent_bar{ background-color: olive; }
+.pollino_poll .pollino_item4 .pollino_percent_bar{ background-color: steelblue; }
+.pollino_poll .pollino_item5 .pollino_percent_bar{ background-color: goldenrod; }
+
+/** Ajax loader anim */
+.pollino_loader{
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    background: url("ajax-loader.gif") no-repeat;
+}
+.pollino_hidden{
+    display: none;
+}
+
+/**
+ * For custom output
+ */
+
+
+
+
+/*
+==============================================
+stretchRight
+==============================================
+*/
+
+.stretchRight{
+    animation-name: stretchRight;
+    -webkit-animation-name: stretchRight;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+
+    transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+}
+
+@keyframes stretchRight {
+    0% {
+        transform: scaleX(0.3);
+    }
+    40% {
+        transform: scaleX(1.02);
+    }
+    60% {
+        transform: scaleX(0.98);
+    }
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(0.98);
+    }
+    80% {
+        transform: scaleX(1.01);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@-webkit-keyframes stretchRight {
+    0% {
+        -webkit-transform: scaleX(0.3);
+    }
+    40% {
+        -webkit-transform: scaleX(1.02);
+    }
+    60% {
+        -webkit-transform: scaleX(0.98);
+    }
+    80% {
+        -webkit-transform: scaleX(1.01);
+    }
+    100% {
+        -webkit-transform: scaleX(0.98);
+    }
+    80% {
+        -webkit-transform: scaleX(1.01);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+    }
+}
