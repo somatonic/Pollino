@@ -12,14 +12,14 @@ class PollinoConfig extends ModuleConfig{
                 'type' => 'text',
                 'label' => 'Default form action',
                 'value' => './',
-                'description' => 'Default action url for the voting forms.',
+                'description' => 'Default action url for the voting form.',
                 ),
             array(
                 'name' => 'result_sorting',
                 'type' => 'select',
                 'label' => 'Default result sorting',
                 'value' => 'sort',
-                'description' => 'Default action url for the voting forms.',
+                'description' => 'Default sorting of the answers.',
                 'options' => array(
                         'sort' => 'Sort as in tree',
                         'vote_desc' => 'Sort by Votes DESC',
