@@ -228,7 +228,7 @@ class Pollino extends WireData implements Module {
                 $poll->vote_total = $total;
             }
             foreach($answers as $answer) {
-                $answer->vote_percent = isset($data[$answer->id]) ? round((100/$total) * $data[$answer->id]['vote_count'], 1) : 0;
+                $answer->vote_percent = isset($data[$answer->id]) ? number_format(round((100/$total) * $data[$answer->id]['vote_count'], 1), 1, ".", " ") : 0;
                 $answer->vote_count = isset($data[$answer->id]) ? $data[$answer->id]['vote_count'] : 0;
                 $data[$answer->id]['vote_text'] = $answer->title;
                 $data[$answer->id]['vote_count'] = $answer->vote_count;
